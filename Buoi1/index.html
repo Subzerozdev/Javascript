@@ -6,6 +6,29 @@
     <title>Document</title>
 </head>
 <body>
-    new gvhgfhgfhgffgbfdgf
+   
+    <!-- cách 1... -->
+    <!-- <button onclick="alert('Hello World!!!!!!')">Click me </button> -->
+
+<!-- ------------------------------------------------------------------------------------------------- -->
+    <!-- cách 2:  Internal-->
+    <!-- <button>
+        Click me 
+        
+          </button>
+  <script>
+
+
+var  button =document.querySelector("button");
+button.onclick= function () {
+    alert("Hello World");
+
+}
+  </script> -->
+<!-- ------------------------------------------------------------------------------------------------- -->
+<!-- Cách 3: External - viết ra một file js khác rồi nhúng vào trang HTML. -->
+<button>Click me please !!!</button>
+<script src="script.js"></script>
+
 </body>
 </html>
