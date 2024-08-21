@@ -94,11 +94,36 @@
 
 //7.6 toUpperCase() và toLowerCase():
 
-var myString ="Xin chào! Tôi tên Khánh. Tôi năm nay 20 tuổi";
-console.log(myString.toLowerCase());
-console.log(myString.toUpperCase());
+// var myString ="Xin chào! Tôi tên Khánh. Tôi năm nay 20 tuổi";
+// console.log(myString.toLowerCase());
+// console.log(myString.toUpperCase());
 
 //7.7 trim():
 // dùng để bỏ đi khoảng trắng ở 2 đầu.
 // các khoảng trắng giữa các ký tự không bị loại bỏ.
 // cú pháp: string.trim()
+// var myString ="    Xin chào! Tôi tên Khánh. Tôi năm nay 20 tuổi   ";
+// console.log(myString);
+// console.log(myString.trim());
+
+
+
+//7.8  charAt(): 
+// dùng để lấy kí tự thông qua index.
+// cú pháp: string.charAt(index)
+// với index là vị trí của kí tự cần lấy.
+
+// var myString ="Nguyễn Gia Khánh";
+// console.log(myString.charAt()); // lấy kí tự đầu tiên 
+// console.log(myString.charAt(0)); // lấy kí tự đầu tiên 
+// console.log(myString.charAt(1));// lấy kí tự thứ 2 
+// console.log(myString.charAt(myString.length-1)); // lấy ký tự cuối cùng 
+
+// 7.9 split(): 
+// chuyển một chuỗi thành một array.
+// nhưng cần tìm ra điểm chung của chuỗi đó.
+var myString ="HTML, CSS3, Javascript";
+console.log(myString.split()); // cả string là 1 phần tử 
+console.log(myString.split("")); // mỗi ký tự là 1 phần tử
+console.log(myString.split(",")); // mỗi từ là 1 phần tử
+console.log(myString.split(",",2)); // mỗi từ là 1 phần tử, lấy tối đa 2 phần tử
