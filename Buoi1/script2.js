@@ -283,11 +283,37 @@
 // console.log(list);
 
 // ví dụ 3: vừa xóa phần tử và chèn phần tử mới vào mảng: 
-var list =["HTML","CSS","Javascript"];
-console.log(list.splice(2,1,"VuejS", "NodeJs")); // trả về ["Javascript"]
-console.log(list);// trả về ["HTML","CSS","VueJS", "Nodejs"];
+// var list =["HTML","CSS","Javascript"];
+// console.log(list.splice(2,1,"VuejS", "NodeJs")); // trả về ["Javascript"]
+// console.log(list);// trả về ["HTML","CSS","VueJS", "Nodejs"];
 
 
+//9.8 concat():
+// dùng để nối 2 array.
+//không làm ảnh hưởng đến mảng ban đầu.
+// cú pháp: array1.concat(array2, array3....,arrayX)
+// var list =["HTML","CSS","Javascript"];
+// var list2 =["BootStrap 4","ReactJS"];
+// var list3 =["VueJS", "AngularJS"];
+// console.log(list);
+// console.log(list.concat(list2,list3));
+
+
+//9.8 slice():
+// dùng để cắt các phần tử.
+// không làm ảnh hưởng đến mảng ban đầu.
+// cú pháp: array.slice(start,end)
+
+//trong đó:
+// start: vị trí bắt đầu. mặc định là 0. ( không bắt buộc).
+// end: vị trí kết thúc . mặc định là phần tử cuối cùng ( không bắt buộc).
+
+var list =["HTML","CSS","Javascript","BootStrap 4","ReactJS"];
+
+console.log(list.slice(3));
+console.log(list.slice(1,3));
+console.log(list.slice(-3,-1));
+console.log(list);
 
 
 
