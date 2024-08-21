@@ -122,8 +122,173 @@
 // 7.9 split(): 
 // chuyển một chuỗi thành một array.
 // nhưng cần tìm ra điểm chung của chuỗi đó.
-var myString ="HTML, CSS3, Javascript";
-console.log(myString.split()); // cả string là 1 phần tử 
-console.log(myString.split("")); // mỗi ký tự là 1 phần tử
-console.log(myString.split(",")); // mỗi từ là 1 phần tử
-console.log(myString.split(",",2)); // mỗi từ là 1 phần tử, lấy tối đa 2 phần tử
+// var myString ="HTML, CSS3, Javascript";
+// console.log(myString.split()); // cả string là 1 phần tử 
+// console.log(myString.split("")); // mỗi ký tự là 1 phần tử
+// console.log(myString.split(",")); // mỗi từ là 1 phần tử
+// console.log(myString.split(",",2)); // mỗi từ là 1 phần tử, lấy tối đa 2 phần tử
+
+
+//8.0 Làm việc với Number:
+
+//8.1 isNaN():
+// dùng để kiểm tra một biến có phải là NaN không.
+//NaN: là viết tắt của Not a Number.
+// cú pháp: isNaN ( tenbien)
+
+// var a =10;
+// var b =20;
+// var result =a/b;
+
+
+// console.log( result); // trả về NaN
+
+// if (typeof result=="number"){
+//     console.log("Đây là số :"+result);
+// }
+
+// // thay vì dùng if kèm theo typeOf để check có thể dùng isNaN()
+// if (isNaN(result)){
+//     console.log("Số này bị lỗi");
+// }
+// else {
+//     console.log("Đây là số "+result);
+// }
+
+// console.log(isNaN(result));  // trả về true
+
+
+
+//8.2 toString():
+
+// chuyển kiểu số thành kiểu String.
+// cú pháp: tenBien.toString()
+
+// var a =10;
+// var b =a.toString();
+// var c =(10).toString();
+
+// console.log(a);  // trả về số 10 
+// console.log(typeof a); // trả về kiểu Number
+// console.log(b);  // trả về chuỗi 10
+// console.log(typeof b); // trả về kiểu String 
+// console.log(c);  // Trả về chuỗi 10
+// console.log(typeof c);   // Trả về kiểu String
+
+//8.3 toFixed():
+// dùng để làm tròn số thập phân.
+// nếu số ngay sau số cần làm tròn
+// >=5 thì sẽ làm tròn lên.
+// <5 sẽ làm tròn xuống.
+// cú pháp: toFixed (digits)
+// trong đó: digits là số chữ số sau dấu thập phân ( 0 <= digits <=100). Không điền mặc định là 0
+
+
+// var a =12.3456;
+// console.log(a.toFixed()); // trả về 12
+// console.log(a.toFixed(0));  // trả về 12
+// console.log(a.toFixed(1));  // trả về 12.3
+// console.log(a.toFixed(2));  // trả về 12.35
+// console.log(a.toFixed(3));  // trả về 12.346
+
+//09. Làm việc với Array.
+// chuyển array thành string.
+// tự động thêm dấu phẩy ngăn cách.
+// cú pháp: array.toString().
+
+// var list =["HTML", "CSS", "Javascript"];
+// console.log(list.toString()); // trả về "HTML,CSS,Javascript", không có dấu cách nha...
+
+
+//9.2 join():
+// chuyển array thành string.
+// thêm dấu bất kỳ để ngăn cách giữa các phần tử.
+// cú pháp: array.join(separator)
+// trong đó:
+// separator ( dải phân cách) là dấu ngăn cách để thêm vào String. Mặc định là dấu phẩy.
+
+// var list =["HTML", "CSS", "Javascript"];
+
+// console.log(list.join());
+// console.log(list.join("," ));
+// console.log(list.join(""));
+// console.log(list.join(", "));
+// console.log(list.join(" - "));
+
+
+
+//9.3 pop(): xóa phần tử ở cuối mảng.
+// dùng để xóa phần tử cuối mảng.
+// trả về phần tử cuối mảng.
+// cú pháp: array.pop()
+
+//  var list =["HTML", "CSS", "Javascript"];
+
+//  console.log(list.pop()); // trả về  "Javascript"
+//  console.log(list); // trả về ["HTML", "CSS"]
+
+
+ //9.4 push(): thêm 1 hoặc nhiều phần tử vào cuối mảng 
+
+ // thêm một hoặc nhiều phần tử vào cuối mảng.
+ // trả về  độ dài mới của mảng.
+ // cú pháp: array.push(item1,item2,.....,itemX)
+
+//  var list =["HTML","CSS","Javascript"];
+//  console.log(list.push("ReactJS","Java Spring Boot"));
+//  console.log(list);
+
+
+ //9.5 shift(): xóa phần tử ở đầu mảng.
+ // dùng để xóa phần tử đầu mảng.
+ // trả về phần tử ở đầu mảng.
+ // cú pháp: array.shift()
+
+//  var list =["HTML","CSS","Javascript"];
+//  console.log(list.shift());
+//  console.log(list);
+
+
+ //9.6 unshift(): thêm phần tử vào đầu mảng.
+ // thêm 1 hoặc nhiều phần tử vào đầu mảng.
+ // trả về độ dài mới của mảng.
+
+// cú pháp: array.unshift(item1,item2......,itemXXXXX....)
+
+// var list =["HTML","CSS","Javascript"];
+// console.log(list.unshift("VueJS","ExpressJS"));
+// console.log(list);
+
+
+//9.7 splice()
+// xóa hoặc chèn phần tử mới vào mảng.
+// trả về mảng bị xóa.
+// cú pháp: array.splice(index, howmany, item1, ...., itemX)
+// trong đó:
+//index: vị trí thêm/ xóa phần tử ( bắt buộc ) 
+//howmany: số phần tử cần xóa ( không bắt buộc) *****
+//item1,...,itemX: các phần tử mới được thêm vào ( không bắt buộc).
+
+
+// ví dụ 1 : chèn phần tử  mới vào mảng:
+
+// var list =["HTML","CSS","Javascript"];
+// console.log(list.splice(2,0,"Bootstrap 4", "ReactJs")); // trả về [] tại đang thêm vào mà có xóa đi đâu
+// console.log(list);
+
+
+// ví dụ 2: xóa phần tử trong mảng.
+// var list =["HTML","CSS","Javascript"];
+// console.log(list.splice(1,2)); // trả về ["CSS","Javascript"]  xóa 2 phần tử từ index =1;
+// console.log(list);
+
+// ví dụ 3: vừa xóa phần tử và chèn phần tử mới vào mảng: 
+var list =["HTML","CSS","Javascript"];
+console.log(list.splice(2,1,"VuejS", "NodeJs")); // trả về ["Javascript"]
+console.log(list);// trả về ["HTML","CSS","VueJS", "Nodejs"];
+
+
+
+
+
+
