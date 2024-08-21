@@ -69,3 +69,23 @@
 // console.log(myString.lastIndexOf("tôi"));
 // console.log(myString.lastIndexOf("tôi",100)); 
 
+
+
+//7.4 slice(): dùng để cắt một chuỗi và trả về 1 chuỗi mới.
+// Cú pháp: String.slice(start,end);
+
+// var myString ="Xin chào! Tôi tên Khánh. tôi năm nay 20 tuổi";
+// console.log(myString.slice(10,25));
+// console.log(myString.slice(0)); // lấy toàn bộ chuỗi. thay cho copy nè.
+// console.log(myString.slice(0,1)); // lấy kí tự đầu tiên của chuỗi.
+// console.log(myString.slice(-1)); // lấy kí tự cuối cùng của chuỗi.
+// console.log(myString.slice()); //vẫn giữ nguyên chuỗi gốc.
+
+
+//7.5 replace(): dùng để thay thế 1 chuỗi thành 1 chuỗi mới.
+// nhưng chỉ thay thế chuỗi đầu tiên mà nó tìm thấy.
+// cú pháp: string.replace(searchValue, newValue)
+
+var myString ="Xin chào! Tôi tên Khánh. Tôi năm nay 20 tuổi";
+console.log(myString.replace("tôi","Mình"));
+console.log(myString.replace(/Tôi/g,"Mình")); // cấu trúc regex. ( lên mạng xem lại )., cứ gặp Tôi là thay méo nói nhiều.
