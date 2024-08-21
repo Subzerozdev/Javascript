@@ -86,6 +86,19 @@
 // nhưng chỉ thay thế chuỗi đầu tiên mà nó tìm thấy.
 // cú pháp: string.replace(searchValue, newValue)
 
+// var myString ="Xin chào! Tôi tên Khánh. Tôi năm nay 20 tuổi";
+// console.log(myString.replace("tôi","Mình"));
+// console.log(myString.replace(/Tôi/g,"Mình")); // cấu trúc regex. ( lên mạng xem lại )., cứ gặp Tôi là thay méo nói nhiều.
+
+
+
+//7.6 toUpperCase() và toLowerCase():
+
 var myString ="Xin chào! Tôi tên Khánh. Tôi năm nay 20 tuổi";
-console.log(myString.replace("tôi","Mình"));
-console.log(myString.replace(/Tôi/g,"Mình")); // cấu trúc regex. ( lên mạng xem lại )., cứ gặp Tôi là thay méo nói nhiều.
+console.log(myString.toLowerCase());
+console.log(myString.toUpperCase());
+
+//7.7 trim():
+// dùng để bỏ đi khoảng trắng ở 2 đầu.
+// các khoảng trắng giữa các ký tự không bị loại bỏ.
+// cú pháp: string.trim()
