@@ -250,7 +250,7 @@ var String ="Nguyễn Gia Khánh";
 // }
 // var ketQua= tong(10,20,20);
 // console.log(ketQua);
-
+// *** dùng 3 dấu chấm khi mà argument là só còn là mảng thì ghi tên mảng là được.
 
 // biến thể arrow Function của setTimeOut:
 
@@ -271,20 +271,69 @@ var String ="Nguyễn Gia Khánh";
 // ,3000); // bỏ luôn dấu ngoặc đấy
 
 // ví dụ 1 : 
-const mang =[1,2,3,4,5,6,7,8,9,10];
+// const mang =[1,2,3,4,5,6,7,8,9,10];
 // tính tổng các số chẵn của mảng đó.
 
-const tongSoChan = (array) => {
-let tong =0;
-for (let i=0; i< array.length;i++){
-if ( array[i]%2 ==0){
-    tong +=array[i];
-}
-}
-return tong;
+// const tongSoChan = (array) => {
+// let tong =0;
+// for (let i=0; i< array.length;i++){
+// if ( array[i]%2 ==0){
+//     tong +=array[i];
+// }
+// }
+// return tong;
 
+// }
+
+
+// const result =tongSoChan(mang);
+// console.log(result);
+
+// ví dụ 2 : viết chương trình cho người dùng nhập vào số n lớn hơn 0  sau đó dựa vào n tính giá tị của biểu thức: 
+
+//  //khao báo hàm:
+//  const tongn = (flow) => {
+//     let tong =0;
+//     for (let i =0;i<= flow; i++){
+//         tong += i/flow;
+//     }
+//     return tong;
+// }
+
+// let n ;
+// do {
+//    // hiển thị hộp thoại cho người đùng nhập dữ liệu : 
+
+// n=parseInt(prompt("Nhập n :"));
+// if (n <=0){
+//     console.log("Vui lòng nhập số lớn hơn 0!!!");
+// }
+// else {
+//     console.log(n);
+//     const result =tongn(n);
+// console.log(result);
+// }    
+   
+// }
+
+//  while ( n <=0 );
+
+ 
+
+
+/// try catch: là một khối l;ệnh dùng để bắt lỗi chương trình.
+// khi muốn chương trình không bị dừng khi một lệnh nào đó bị lỗi.
+//const a =10;
+
+try {
+    console.log("a =  "+a);
+} 
+catch (error){
+console.log(error);
 }
 
 
-const result =tongSoChan(mang);
-console.log(result);
+
+
+
+
