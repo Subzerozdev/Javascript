@@ -121,20 +121,170 @@
 // cú pháp: for (key in object){}
 // key: là tên biến ( đặt tên là gì cũng được);
 // object: là một object, mỗi object , mỗi key sẽ tương ứng với key trong object.
-var infoUser ={
-    fullName: "Nguyễn Gia Khánh",
-    email: "khanhtrantuc2004@gmail.com",
-    phone: "0903128236"
+// var infoUser ={
+//     fullName: "Nguyễn Gia Khánh",
+//     email: "khanhtrantuc2004@gmail.com",
+//     phone: "0903128236"
 
-}; // đây là 1 object .
+// }; // đây là 1 object .
 
-for (key in infoUser){
-    //console.log(key); // lấy ra key của một object.
-    console.log(`${key} - ${infoUser[key]}`); 
-// inforUser[key] ==> thì nó mới có không thì undefined đấy
+// for (key in infoUser){
+//     //console.log(key); // lấy ra key của một object.
+//     console.log(`${key} - ${infoUser[key]}`); 
+// // inforUser[key] ==> thì nó mới có không thì undefined đấy
+
+
+// }
+
+// vòng lặp For Of:
+// vòng lặp for of dùng để lấy ra phần tử của một array, string.
+// không áp dụng được với object.
+
+// var list =["HTML", "CSS", "Javacript"];
+
+//console.log(list);
+// for (var item =0; item < list.length; item++){
+//     console.log(list[item]);
+// }
+
+// thay vì dùng for thì dùng For Of.
+
+
+// for (var item of list){
+// console.log(item);
+// }
+
+
+// ví dụ cho chuỗi:
+var String ="Nguyễn Gia Khánh";
+
+// for (var i=0; i< String.length; i++){
+//     console.log(String[i]);
+// }
+
+// dùng vòng lặp for of:
+
+// for (var character of String ){
+//     console.log(character);
+// }
+
+
+// vòng lặp while: 
+// luôn luôn kiểm tra điều kiện trước, nếu điều kiện thảo mãn thì mới chạy vào trong vòng lặp.
+// var i=1
+// while ( i <=  10){
+//  console.log(i);
+//  i++;
+// }
+
+// var i =0;
+// var list =["HTML", "CSS", "Javacript"];
+
+// while ( i <  list.length){
+//     console.log(list[i]);
+//     i++;
+//    }
+
+
+// vòng lặp do while: 
+// vòng lặp do... while luôn thực hiện ít nhất một lượt lặp.
+// sau đó mới kiểm tra điều kiện lặp.
+// var i =20;
+// do {
+// console.log(i);
+// i++
+// } while (i <=10); // mặc dù là 20 không nhỏ hơn 10 nhưng vòng lặp do while thực hiện ít nhất 1 lần nên nó in ra đó.
+
+
+// break: dừng lại luôn.
+// for (var i=0; i< 10; i++){
+//     console.log(i);
+
+//     if (i==5){
+//         console.log("Bạn đã rút tối đa số tiền của một ngày!!!!");
+//         break;
+//     }
+// }
+
+
+// continue: đoạn code bên dưới không được thực hiện mà sang vòng lặp tiếp theo luôn.
+ 
+// for (var i=0; i< 10; i++){
+//     if (i==5){
+//         continue;
+//     }
+//     console.log(i);
+
+   
+// }
+
+// ví dụ về Expression function ( hàm biểu thức):
+
+// var tong =function () {
+//     let tong =0;
+//      for (const item of arguments){
+//         tong +=item;
+
+//      }
+//      return tong;
+// }
+// var ketQua= tong(10,20,20);
+// console.log(ketQua);
+
+// Arrow function ( Hàm mũi tên):
+// không có tính hoisting ( nếu gọi hàm trước lúc khai báo hàm thì sẽ bị lỗi)
+//không có đối tượng arguments.
+// cú pháp:
+// var tenHam =(tham so1, thamso2,....) => {
+//code
+//}
+
+// var tong = (...arguments) => { // .. arguments về sau sẽ biết. ( đặt tên khác cũng được)
+    
+//     let tong =0;
+//      for (const item of arguments){
+//         tong +=item;
+
+//      }
+//      return tong;
+// }
+// var ketQua= tong(10,20,20);
+// console.log(ketQua);
+
+
+// biến thể arrow Function của setTimeOut:
+
+// setTimeout(function() {
+//     console.log("OK");
+// },3000);
+
+// muốn gọn hơn nữa:
+
+// setTimeout(() => {
+//     console.log("OK");
+// },3000);
+
+
+// gọn hơn nữa: 
+
+// setTimeout(() =>    console.log("OK")
+// ,3000); // bỏ luôn dấu ngoặc đấy
+
+// ví dụ 1 : 
+const mang =[1,2,3,4,5,6,7,8,9,10];
+// tính tổng các số chẵn của mảng đó.
+
+const tongSoChan = (array) => {
+let tong =0;
+for (let i=0; i< array.length;i++){
+if ( array[i]%2 ==0){
+    tong +=array[i];
+}
+}
+return tong;
 
 }
 
-    
 
- 
+const result =tongSoChan(mang);
+console.log(result);
